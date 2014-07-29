@@ -1,7 +1,7 @@
 <?php
 require_once(__DIR__."/../../../vendor/phpQuery/phpQuery/phpQuery.php");
 
-class BuscaCEP
+abstract class BuscaCEP
 {
     CONST URL = "http://m.correios.com.br/movel/buscaCepConfirma.do";
     
