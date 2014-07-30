@@ -1,4 +1,6 @@
 <?php
+namespace BVW\Helper;
+
 require_once(__DIR__."/../../../vendor/phpQuery/phpQuery/phpQuery.php");
 
 abstract class BuscaCEP
@@ -14,7 +16,7 @@ abstract class BuscaCEP
                 'metodo'=>'buscarCep'
         ));
         
-        phpQuery::newDocumentHTML($html, $charset = 'utf-8');
+        \phpQuery::newDocumentHTML($html, $charset = 'utf-8');
 
         $dados = array(
             'Logradouro'=> trim(pq('.caixacampobranco .resposta:contains("Logradouro: ") + .respostadestaque:eq(0)')->html()),

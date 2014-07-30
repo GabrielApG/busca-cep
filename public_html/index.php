@@ -1,5 +1,7 @@
 <?php
-require_once(__DIR__."/../src/BVW/Helper/BuscaCEP.php");
+require_once(__DIR__."/../vendor/autoload.php");
+
+use BVW\Helper\BuscaCEP;
 
 if (isset($_POST["CEP"])) {
     die(var_dump(BuscaCEP::busca($_POST["CEP"])));

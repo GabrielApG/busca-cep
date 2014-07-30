@@ -1,0 +1,20 @@
+{
+    "description" : "BuscaCEP - Pesquisa de endereços baseada em CEP",
+    
+    "type" : "project",
+    
+    "authors" : [
+        {
+            "name"     : "Bruno Vaula Werneck",
+            "email"    : "brunovaulawerneck@gmail.com",
+            "homepage" : "http://www.brunowerneck.com.br",
+            "role"     : "Developer"
+        }
+    ],
+    
+    "license" : "MIT",
+    
+    "autoload": {
+        "psr-0": {"BVW\\": "src/"}
+    }
+}
