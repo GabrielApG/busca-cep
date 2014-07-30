@@ -32,3 +32,7 @@ php -S 0.0.0.0:8000 -t public_html/
   </Directory>
 </Virtualhost>
 ```
+
+## Dependências
+
+O sistema BuscaCEP depende do phpQuery, que pode ser encontrado aqui: http://code.google.com/p/phpquery/
