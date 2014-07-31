@@ -1,12 +1,28 @@
 <?php
 namespace BVW\Helper;
 
+// O phpQuery não funciona com namespaces e autoload. Precisa ser adicionado manualmente
 require_once(__DIR__."/../../../vendor/phpQuery/phpQuery/phpQuery.php");
 
+/**
+ * Class BuscaCEP
+ * 
+ * Busca endereços no site dos Correios pelo CEP informado.
+ * 
+ */
 abstract class BuscaCEP
 {
+    /**
+     * @var string URL dos correios para fazer a busca
+     */
     CONST URL = "http://m.correios.com.br/movel/buscaCepConfirma.do";
     
+    /**
+     * Faz a busca pelo endereço do CEP informado.
+     * 
+     * @param string $cep CEP nos formatos XXXXXXXX ou XXXXX-XXX
+     * @return array Array com o endereço encontrado ou vazio em caso de erro
+     */
     public static function busca($cep)
     {
         $html = self::simple_curl(self::URL, array(
@@ -33,6 +49,14 @@ abstract class BuscaCEP
         return $dados;
     }
     
+    /**
+     * Executa a leitura da página e devolve o HTML em um cURL handler.
+     * 
+     * @param string $url
+     * @param array $post
+     * @param array $get
+     * @return cURL Handler
+     */
     private static function simple_curl($url,$post=array(),$get=array())
     {
 	$url = explode('?',$url,2);
