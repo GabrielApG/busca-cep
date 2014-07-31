@@ -13,7 +13,7 @@ require_once(__DIR__."/../../../vendor/phpQuery/phpQuery/phpQuery.php");
 abstract class BuscaCEP
 {
     /**
-     * @var string URL dos correios para fazer a busca
+     * @constant string URL dos correios para fazer a busca
      */
     CONST URL = "http://m.correios.com.br/movel/buscaCepConfirma.do";
     
@@ -26,10 +26,10 @@ abstract class BuscaCEP
     public static function busca($cep)
     {
         $html = self::simple_curl(self::URL, array(
-                'cepEntrada'=>$cep,
-                'tipoCep'=>'',
-                'cepTemp'=>'',
-                'metodo'=>'buscarCep'
+                'cepEntrada' => $cep,
+                'tipoCep'    => '',
+                'cepTemp'    => '',
+                'metodo'     => 'buscarCep'
         ));
         
         \phpQuery::newDocumentHTML($html, $charset = 'utf-8');
