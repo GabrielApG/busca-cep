@@ -20,5 +20,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+-------------------------------------------------------------------------------
+Code based on the codes by [Eliseu Borges](http://blog.eliseuborges.com/?p=73) 
+and [Taylor Lopes](http://taylorlopes.com/?p=2048)
+
+-------------------------------------------------------------------------------
 phpQuery licensed to Tobiasz Cudnik, under MIT License. 
 https://github.com/TobiaszCudnik/phpquery
