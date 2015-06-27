@@ -35,6 +35,8 @@ Para executar o sistema, basta chamar a classe:
 
 > use BVW\Correios\BuscaCEP;
 > 
-> BuscaCep::busca($cep);
+> $correios = new BuscaCEP();
+>
+> $correios->busca($cep);
 
 Você pode pesquisar o CEP nos formatos **00000-000** ou **00000000**
