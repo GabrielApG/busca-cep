@@ -2,7 +2,7 @@
 namespace BVW\Correios;
 
 // O phpQuery não funciona com namespaces e autoload. Precisa ser adicionado manualmente
-require_once(__DIR__."/../../../vendor/electrolinux/phpquery/phpQuery/phpQuery.php");
+require_once(__DIR__."/../../../../../electrolinux/phpquery/phpQuery/phpQuery.php");
 
 /**
  * Class BuscaCEP
