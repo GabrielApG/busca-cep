@@ -1,20 +1,28 @@
 {
+    "name" : "brunowerneck/buscacep",
     "description" : "BuscaCEP - Pesquisa de endereços baseada em CEP",
-    
+    "keywords" : ["correios", "cep"],
+    "homepage" : "https://github.com/brunowerneck/BuscaCEP",
     "type" : "project",
     
     "authors" : [
         {
             "name"     : "Bruno Vaula Werneck",
             "email"    : "brunovaulawerneck@gmail.com",
-            "homepage" : "http://www.brunowerneck.com.br",
             "role"     : "Developer"
         }
     ],
     
     "license" : "MIT",
+
+    "require": {
+      "php" : ">=5.4.0",
+      "electrolinux/phpquery": "dev-master"
+    },
     
     "autoload": {
-        "psr-0": {"BVW\\": "src/"}
+        "psr-4": {
+          "BVW\\": "src/BVW/"
+        }
     }
 }

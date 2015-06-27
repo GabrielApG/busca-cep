@@ -1,38 +1,40 @@
 # BuscaCEP
 
 ### Buscador de CEP
-Classe que busca CEP no site dos Correios
+Classe que pesquisa CEP no site dos Correios e retorna o endereço completo se encontrar.
+
+O retorno é feito em JSON, assim:
+
+```
+{
+    "Logradouro" : "Avenida, Rua, Praça, etc",
+    "Bairro" : "Bairro",
+    "Cep" : "12345678",
+    "Cidade" : "Cidade",
+    "UF" : "UF"
+}
+```
 
 
 ## Instruções
 
 ### Instalação
 ```
-git clone https://github.com/brunowerneck/BuscaCEP.git buscacep
+composer require "brunowerneck/buscacep"
 ```
 
+Ou edite seu composer.json e adicione
+
+```
+require : {
+    "brunowerneck/buscacep" : "dev-master"
+}
+```
 ### Execução
-Para executar o sistema, você pode utilizar tanto o **servidor embutido do PHP 5.4+** quanto o **virtual host do Apache 2.4**.
+Para executar o sistema, basta chamar a classe:
 
-### Servidor embutido do PHP 5.4+
-```
-cd buscacep
-php -S 0.0.0.0:8000 -t public_html/
-```
+> use BVW\Correios\BuscaCEP;
+> 
+> BuscaCep::busca($cep);
 
-### Virtualhost do Apache 2.4
-```
-<Virtualhost *:80>
-  DocumentRoot "/caminho/do/seu/public_html"
-  Servername nome.do.servidor
-  <Directory "/caminho/do/seu/public_html/">
-    AllowOverride All
-    Options All
-    Require all granted
-  </Directory>
-</Virtualhost>
-```
-
-## Dependências
-
-O sistema BuscaCEP depende do phpQuery, que pode ser encontrado aqui: http://code.google.com/p/phpquery/
+Você pode pesquisar o CEP nos formatos **00000-000** ou **00000000**

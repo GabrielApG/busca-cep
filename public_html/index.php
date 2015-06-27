@@ -1,10 +1,13 @@
 <?php
 require_once(__DIR__."/../vendor/autoload.php");
 
-use BVW\Helper\BuscaCEP;
+use BVW\Correios\BuscaCEP;
 
-if (isset($_POST["CEP"])) {
-    die(var_dump(BuscaCEP::busca($_POST["CEP"])));
+$cep = filter_input(INPUT_POST, 'CEP');
+if($cep) {
+    $correios = new BuscaCEP();
+    $correios->busca($cep);
+    die();
 }
 
 ?>
